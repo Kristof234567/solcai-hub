@@ -3,7 +3,7 @@ import logoAsset from "@/assets/logo_solcai.png.asset.json";
 import heroFood from "@/assets/hero-food.jpg";
 import scanFood from "@/assets/scan-food.jpg";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
-import googlePlayBadge from "@/assets/googleplay-badge.webp.asset.json";
+import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
