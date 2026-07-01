@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
 import heroFood from "@/assets/hero-food.jpg";
 import scanFood from "@/assets/scan-food.jpg";
+import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
+import googlePlayBadge from "@/assets/googleplay-badge.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -21,9 +23,14 @@ function Nav() {
           <a href="#reviews" className="hover:text-foreground transition">Reviews</a>
           <a href="#faq" className="hover:text-foreground transition">FAQ</a>
         </nav>
-        <a href="#download" className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium text-primary-foreground shadow-[var(--shadow-gold)]" style={{ background: "var(--gradient-gold)" }}>
-          Download
-        </a>
+        <div className="flex items-center gap-2">
+          <a href="#download" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
+            <img src={appStoreBadge.url} alt="Download for iOS" className="h-10 w-auto" />
+          </a>
+          <a href="#download" aria-label="Download for Android on Google Play" className="block transition hover:opacity-80">
+            <img src={googlePlayBadge.url} alt="Download for Android" className="h-10 w-auto" />
+          </a>
+        </div>
       </div>
     </header>
   );
