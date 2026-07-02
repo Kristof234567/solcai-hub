@@ -4,6 +4,9 @@ import heroFood from "@/assets/hero-food.jpg";
 import scanFood from "@/assets/scan-food.jpg";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
 import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
+import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
+import avatarDaniel from "@/assets/avatar-daniel.jpg.asset.json";
+import avatarPriya from "@/assets/avatar-priya.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -159,9 +162,9 @@ function Stats() {
 
 function Reviews() {
   const reviews = [
-    { name: "Maya R.", role: "Marathon runner", body: "I dropped MyFitnessPal after two days with Solc. It's just… faster. Photo, done." },
-    { name: "Daniel K.", role: "Busy dad", body: "The kids' half-eaten pasta, the diner burger, my post-gym shake — it logs all of it in seconds." },
-    { name: "Priya S.", role: "Nutrition coach", body: "I recommend Solc AI to every client. The macro estimates hold up against my lab reference meals." },
+    { name: "Maya R.", role: "Marathon runner", body: "I dropped MyFitnessPal after two days with Solc. It's just… faster. Photo, done.", avatar: avatarMaya.url, stars: 5 },
+    { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url, stars: 4 },
+    { name: "Priya S.", role: "Nutrition coach", body: "I recommend Solc AI to every client. The macro estimates hold up against my lab reference meals.", avatar: avatarPriya.url, stars: 5 },
   ];
   return (
     <section id="reviews" className="py-32">
@@ -173,11 +176,14 @@ function Reviews() {
         <div className="grid md:grid-cols-3 gap-6">
           {reviews.map((r) => (
             <blockquote key={r.name} className="rounded-3xl border border-border/60 bg-surface p-8 flex flex-col">
-              <div className="text-gold text-lg mb-4">★★★★★</div>
+              <div className="text-gold text-lg mb-4">{"★".repeat(r.stars)}<span className="text-muted-foreground/30">{"★".repeat(5 - r.stars)}</span></div>
               <p className="text-foreground/90 leading-relaxed flex-1">"{r.body}"</p>
-              <footer className="mt-6 pt-6 border-t border-border/60">
-                <div className="font-semibold">{r.name}</div>
-                <div className="text-sm text-muted-foreground">{r.role}</div>
+              <footer className="mt-6 pt-6 border-t border-border/60 flex items-center gap-3">
+                <img src={r.avatar} alt={r.name} className="h-10 w-10 rounded-full object-cover" loading="lazy" width={40} height={40} />
+                <div>
+                  <div className="font-semibold">{r.name}</div>
+                  <div className="text-sm text-muted-foreground">{r.role}</div>
+                </div>
               </footer>
             </blockquote>
           ))}
