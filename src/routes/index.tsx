@@ -43,10 +43,6 @@ function Hero() {
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full blur-3xl" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)", opacity: 0.25 }} />
       </div>
       <div className="relative max-w-6xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface/60 backdrop-blur px-4 py-1.5 text-xs text-muted-foreground mb-8">
-          <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-          Powered by on-device AI vision
-        </div>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.02] tracking-tight">
           Snap your meal.
           <br />
