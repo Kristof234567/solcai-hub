@@ -52,11 +52,11 @@ function Hero() {
           Solc AI reads your plate in seconds. No barcodes. No searching. Just point, shoot, and log — with calories and macros you can actually trust.
         </p>
         <div id="download" className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#" className="inline-flex items-center gap-3 rounded-full bg-foreground text-background px-7 py-3.5 text-sm font-medium hover:opacity-90 transition">
-            <AppleIcon /> Download for iOS
+          <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
+            <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
           </a>
-          <a href="#" className="inline-flex items-center gap-3 rounded-full border border-border bg-surface/60 px-7 py-3.5 text-sm font-medium hover:bg-surface transition">
-            <PlayIcon /> Get on Android
+          <a href="#" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
+            <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-14 w-auto" />
           </a>
         </div>
         <p className="mt-4 text-xs text-muted-foreground">Free to start · No credit card · 4.9 ★ from 12,400+ users</p>
@@ -242,11 +242,11 @@ function CTA() {
             <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Your next meal is one <span className="italic text-gold-gradient">snap</span> away.</h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">Join thousands who traded calorie counting for calorie snapping.</p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#" className="inline-flex items-center gap-3 rounded-full bg-foreground text-background px-7 py-3.5 text-sm font-medium hover:opacity-90 transition">
-                <AppleIcon /> Download for iOS
+              <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
+                <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
               </a>
-              <a href="#" className="inline-flex items-center gap-3 rounded-full border border-border bg-surface/60 px-7 py-3.5 text-sm font-medium hover:bg-surface transition">
-                <PlayIcon /> Get on Android
+              <a href="#" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
+                <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-14 w-auto" />
               </a>
             </div>
           </div>
