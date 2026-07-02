@@ -269,6 +269,7 @@ function Footer() {
           <span className="text-sm text-muted-foreground">© 2026 Solc AI. Eat smarter.</span>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <a href="#" className="hover:text-foreground transition">Manage subscription</a>
           <a href="#" className="hover:text-foreground transition">Privacy</a>
           <a href="#" className="hover:text-foreground transition">Terms</a>
           <a href="#" className="hover:text-foreground transition">Contact</a>
