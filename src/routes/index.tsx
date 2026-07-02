@@ -72,21 +72,6 @@ function Hero() {
   );
 }
 
-function LogoStrip() {
-  const logos = ["The New York Times", "Forbes", "WIRED", "TechCrunch", "Product Hunt", "Vogue"];
-  return (
-    <section className="border-y border-border/40 bg-surface/40">
-      <div className="max-w-6xl mx-auto px-6 py-10">
-        <p className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6">As featured in</p>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 opacity-70">
-          {logos.map((l) => (
-            <span key={l} className="font-display text-lg md:text-xl text-foreground/70">{l}</span>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function HowItWorks() {
   const steps = [
@@ -303,7 +288,6 @@ function Index() {
       <Nav />
       <main>
         <Hero />
-        <LogoStrip />
         <HowItWorks />
         <FeatureShowcase />
         <Stats />
