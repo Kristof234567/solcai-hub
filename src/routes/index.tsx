@@ -163,7 +163,7 @@ function Stats() {
 function Reviews() {
   const reviews = [
     { name: "Maya R.", role: "Marathon runner", body: "I dropped MyFitnessPal after two days with Solc. It's just… faster. Photo, done.", avatar: avatarMaya.url, stars: 5 },
-    { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url, stars: 4 },
+    { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url, stars: 5 },
     { name: "Priya S.", role: "Nutrition coach", body: "I recommend Solc AI to every client. The macro estimates hold up against my lab reference meals.", avatar: avatarPriya.url, stars: 5 },
   ];
   return (
