@@ -251,9 +251,20 @@ function Footer() {
   return (
     <footer className="border-t border-border/40 py-12">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="" width={24} height={24} className="h-6 w-6 object-contain" />
-          <span className="text-sm text-muted-foreground">© 2026 Solc AI. Eat smarter.</span>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-2">
+            <img src={logoAsset.url} alt="" width={24} height={24} className="h-6 w-6 object-contain" />
+            <span className="text-sm text-muted-foreground">© 2026 Solc AI. Eat smarter.</span>
+          </div>
+          <p className="text-2xl md:text-3xl font-semibold tracking-tight">Download Sol AI Today!</p>
+          <div className="flex items-center gap-3">
+            <a href="#" aria-label="Download on the App Store">
+              <img src={appStoreBadge.url} alt="Download on the App Store" className="h-12 w-auto object-contain" />
+            </a>
+            <a href="#" aria-label="Get it on Google Play">
+              <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-12 w-auto object-contain" />
+            </a>
+          </div>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
           <a href="#" className="hover:text-foreground transition">Manage subscription</a>
