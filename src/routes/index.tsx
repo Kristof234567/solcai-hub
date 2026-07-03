@@ -334,6 +334,7 @@ function Index() {
         <Hero />
         <HowItWorks />
         <FeatureShowcase />
+        <WhyChoose />
         <Stats />
         <Reviews />
         <FAQ />
