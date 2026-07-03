@@ -163,7 +163,7 @@ function Stats() {
 function Reviews() {
   const reviews = [
     { name: "Maya R.", role: "Marathon runner", body: "I dropped MyFitnessPal after two days with Solc. It's just… faster. Photo, done.", avatar: avatarMaya.url, stars: 5 },
-    { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url, stars: 5 },
+    { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url },
     { name: "Priya S.", role: "Nutrition coach", body: "I recommend Solc AI to every client. The macro estimates hold up against my lab reference meals.", avatar: avatarPriya.url, stars: 5 },
   ];
   return (
@@ -176,7 +176,7 @@ function Reviews() {
         <div className="grid md:grid-cols-3 gap-6">
           {reviews.map((r) => (
             <blockquote key={r.name} className="rounded-3xl border border-border/60 bg-surface p-8 flex flex-col">
-              <div className="text-gold text-lg mb-4">{"★".repeat(r.stars)}<span className="text-muted-foreground/30">{"★".repeat(5 - r.stars)}</span></div>
+              {r.stars ? <div className="text-gold text-lg mb-4">{"★".repeat(r.stars)}<span className="text-muted-foreground/30">{"★".repeat(5 - r.stars)}</span></div> : null}
               <p className="text-foreground/90 leading-relaxed flex-1">"{r.body}"</p>
               <footer className="mt-6 pt-6 border-t border-border/60 flex items-center gap-3">
                 <img src={r.avatar} alt={r.name} className="h-10 w-10 rounded-full object-cover" loading="lazy" width={40} height={40} />
