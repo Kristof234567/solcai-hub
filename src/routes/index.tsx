@@ -256,7 +256,7 @@ function Footer() {
             <img src={logoAsset.url} alt="" width={24} height={24} className="h-6 w-6 object-contain" />
             <span className="text-sm text-muted-foreground">© 2026 Solc AI. Eat smarter.</span>
           </div>
-          <p className="text-2xl md:text-3xl font-semibold tracking-tight">Download Sol AI Today!</p>
+          <p className="text-lg md:text-xl font-semibold tracking-tight">Download Sol AI Today!</p>
           <div className="flex items-center gap-3">
             <a href="#" aria-label="Download on the App Store">
               <img src={appStoreBadge.url} alt="Download on the App Store" className="h-12 w-auto object-contain" />
