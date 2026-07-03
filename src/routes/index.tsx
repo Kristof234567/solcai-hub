@@ -139,6 +139,33 @@ function FeatureShowcase() {
   );
 }
 
+function WhyChoose() {
+  const reasons = [
+    { title: "AI-Powered Accuracy", body: "Trained on 2M+ meals with 97% ingredient recognition. No guessing, no vague entries." },
+    { title: "Instant Logging", body: "From plate to log in 3 seconds. No barcodes, no search, no tedious manual entry." },
+    { title: "Privacy First", body: "Your meal photos never leave your device. Only anonymized nutrition totals sync securely." },
+    { title: "Personalized Goals", body: "Solc AI adapts your daily targets based on workouts, sleep, and progress automatically." },
+  ];
+  return (
+    <section className="py-32 bg-surface/30">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4">Why Solc AI</p>
+          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Why Choose <span className="italic text-gold-gradient">Solc AI</span>?</h2>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {reasons.map((r) => (
+            <div key={r.title} className="rounded-3xl border border-border/60 bg-surface p-8 hover:bg-surface-elevated transition">
+              <h3 className="text-xl font-semibold mb-3">{r.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{r.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Stats() {
   const stats = [
     { n: "3s", l: "Average scan time" },
