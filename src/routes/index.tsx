@@ -87,8 +87,7 @@ function HowItWorks() {
   return (
     <section id="how" className="py-32">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl">
-          <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4">How it works</p>
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Three seconds from <span className="text-gold-gradient italic font-normal">plate to log</span>.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6 mt-16">
@@ -151,8 +150,7 @@ function WhyChoose() {
   return (
     <section className="py-32 bg-surface/30">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-16">
-          <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4">Why Solc AI</p>
+        <div className="max-w-2xl mb-16 mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Why Choose <span className="italic text-gold-gradient">Solc AI</span>?</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -200,9 +198,8 @@ function Reviews() {
   return (
     <section id="reviews" className="py-32">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-16">
-          <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4">Loved by 12,400+ users</p>
-          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">People who <span className="italic text-gold-gradient">actually stick</span> with it.</h2>
+        <div className="max-w-2xl mb-16 mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Thousands of users talk about <span className="italic text-gold-gradient">us</span>.</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((r) => (
