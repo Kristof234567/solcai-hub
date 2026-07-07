@@ -7,6 +7,8 @@ import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
 import avatarDaniel from "@/assets/avatar-daniel.jpg.asset.json";
 import avatarPriya from "@/assets/avatar-priya.jpg.asset.json";
+import avatarJordan from "@/assets/avatar-jordan.jpg";
+import avatarSophie from "@/assets/avatar-sophie.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
