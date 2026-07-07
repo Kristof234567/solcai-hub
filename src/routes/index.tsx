@@ -7,6 +7,8 @@ import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
 import avatarDaniel from "@/assets/avatar-daniel.jpg.asset.json";
 import avatarPriya from "@/assets/avatar-priya.jpg.asset.json";
+import avatarJordan from "@/assets/avatar-jordan.jpg";
+import avatarSophie from "@/assets/avatar-sophie.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -192,6 +194,8 @@ function Reviews() {
     { name: "Maya R.", role: "Marathon runner", body: "I dropped MyFitnessPal after two days with Solc. It's just… faster. Photo, done.", avatar: avatarMaya.url, stars: 5 },
     { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url },
     { name: "Priya S.", role: "Nutrition coach", body: "I recommend Solc AI to every client. The macro estimates hold up against my lab reference meals.", avatar: avatarPriya.url, stars: 5 },
+    { name: "Jordan T.", role: "Wellness creator", body: "For people that want to control their calories @calai.app is the app for you 🙌🔥", avatar: avatarJordan, stars: 5 },
+    { name: "Sophie M.", role: "Frequent traveler", body: "I travel nonstop for work and restaurant menus used to stress me out. Now I just snap the menu with Solc AI and order with confidence. Total lifesaver!", avatar: avatarSophie, stars: 5 },
   ];
   return (
     <section id="reviews" className="py-32">
@@ -200,7 +204,7 @@ function Reviews() {
           <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4">Loved by 12,400+ users</p>
           <h2 className="text-4xl md:text-6xl font-semibold leading-tight">People who <span className="italic text-gold-gradient">actually stick</span> with it.</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((r) => (
             <blockquote key={r.name} className="rounded-3xl border border-border/60 bg-surface p-8 flex flex-col">
               {r.stars ? <div className="text-gold text-lg mb-4">{"★".repeat(r.stars)}<span className="text-muted-foreground/30">{"★".repeat(5 - r.stars)}</span></div> : null}
