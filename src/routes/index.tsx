@@ -225,7 +225,7 @@ function FAQ() {
     { q: "Is Solc AI accurate?", a: "Our vision model was trained on over 2 million labeled meals and benchmarked at 97% ingredient accuracy. You can always tweak portions with a swipe." },
     { q: "Do I need to enter recipes?", a: "No. Just point your camera at the food. Solc AI handles mixed plates, drinks, and side dishes automatically." },
     { q: "Is my data private?", a: "Meal photos never leave your device. Only anonymized nutrition totals sync to your account." },
-    { q: "How much does it cost?", a: "Solc AI is free to try with 5 scans per day. Solc Pro unlocks unlimited scans, custom goals, and health integrations." },
+    
     { q: "Which devices are supported?", a: "iPhone 12 and newer, and Android devices running Android 12+ with a modern camera." },
   ];
   return (
