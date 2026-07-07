@@ -204,7 +204,7 @@ function Reviews() {
           <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4">Loved by 12,400+ users</p>
           <h2 className="text-4xl md:text-6xl font-semibold leading-tight">People who <span className="italic text-gold-gradient">actually stick</span> with it.</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((r) => (
             <blockquote key={r.name} className="rounded-3xl border border-border/60 bg-surface p-8 flex flex-col">
               {r.stars ? <div className="text-gold text-lg mb-4">{"★".repeat(r.stars)}<span className="text-muted-foreground/30">{"★".repeat(5 - r.stars)}</span></div> : null}
