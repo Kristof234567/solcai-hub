@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
 import heroFood from "@/assets/hero-food.jpg";
 import scanFood from "@/assets/scan-food.jpg";
@@ -295,10 +296,10 @@ function Footer() {
           </div>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#" className="hover:text-foreground transition">Manage subscription</a>
-          <a href="#" className="hover:text-foreground transition">Privacy</a>
-          <a href="#" className="hover:text-foreground transition">Terms</a>
-          <a href="#" className="hover:text-foreground transition">Contact</a>
+          <Link to="/manage-subscription" className="hover:text-foreground transition">Manage subscription</Link>
+          <Link to="/privacy" className="hover:text-foreground transition">Privacy</Link>
+          <Link to="/terms" className="hover:text-foreground transition">Terms</Link>
+          <Link to="/delete-data" className="hover:text-foreground transition">Delete data</Link>
         </div>
       </div>
     </footer>
