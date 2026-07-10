@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ManageSubscriptionRouteImport } from './routes/manage-subscription'
+import { Route as DeleteDataRouteImport } from './routes/delete-data'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ManageSubscriptionRoute = ManageSubscriptionRouteImport.update({
   id: '/manage-subscription',
   path: '/manage-subscription',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeleteDataRoute = DeleteDataRouteImport.update({
+  id: '/delete-data',
+  path: '/delete-data',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/delete-data': typeof DeleteDataRoute
   '/manage-subscription': typeof ManageSubscriptionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/delete-data': typeof DeleteDataRoute
   '/manage-subscription': typeof ManageSubscriptionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/delete-data': typeof DeleteDataRoute
   '/manage-subscription': typeof ManageSubscriptionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/manage-subscription'
+  fullPaths: '/' | '/delete-data' | '/manage-subscription'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/manage-subscription'
-  id: '__root__' | '/' | '/manage-subscription'
+  to: '/' | '/delete-data' | '/manage-subscription'
+  id: '__root__' | '/' | '/delete-data' | '/manage-subscription'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DeleteDataRoute: typeof DeleteDataRoute
   ManageSubscriptionRoute: typeof ManageSubscriptionRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/manage-subscription'
       fullPath: '/manage-subscription'
       preLoaderRoute: typeof ManageSubscriptionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delete-data': {
+      id: '/delete-data'
+      path: '/delete-data'
+      fullPath: '/delete-data'
+      preLoaderRoute: typeof DeleteDataRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DeleteDataRoute: DeleteDataRoute,
   ManageSubscriptionRoute: ManageSubscriptionRoute,
 }
 export const routeTree = rootRouteImport
