@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ManageSubscriptionRouteImport } from './routes/manage-subscription'
 import { Route as DeleteDataRouteImport } from './routes/delete-data'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/delete-data': typeof DeleteDataRoute
   '/manage-subscription': typeof ManageSubscriptionRoute
   '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/delete-data': typeof DeleteDataRoute
   '/manage-subscription': typeof ManageSubscriptionRoute
   '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,25 @@ export interface FileRoutesById {
   '/delete-data': typeof DeleteDataRoute
   '/manage-subscription': typeof ManageSubscriptionRoute
   '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/delete-data' | '/manage-subscription' | '/privacy'
+  fullPaths:
+    | '/'
+    | '/delete-data'
+    | '/manage-subscription'
+    | '/privacy'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/delete-data' | '/manage-subscription' | '/privacy'
-  id: '__root__' | '/' | '/delete-data' | '/manage-subscription' | '/privacy'
+  to: '/' | '/delete-data' | '/manage-subscription' | '/privacy' | '/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/delete-data'
+    | '/manage-subscription'
+    | '/privacy'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +87,18 @@ export interface RootRouteChildren {
   DeleteDataRoute: typeof DeleteDataRoute
   ManageSubscriptionRoute: typeof ManageSubscriptionRoute
   PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -107,6 +135,7 @@ const rootRouteChildren: RootRouteChildren = {
   DeleteDataRoute: DeleteDataRoute,
   ManageSubscriptionRoute: ManageSubscriptionRoute,
   PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
