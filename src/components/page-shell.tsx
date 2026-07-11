@@ -23,9 +23,9 @@ export function PageShell({ title, children }: { title: string; children: ReactN
             <Link to="/" hash="download" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
               <img src={appStoreBadge.url} alt="Download for iOS" className="h-10 w-auto" />
             </Link>
-            <Link to="/" hash="download" aria-label="Download for Android on Google Play" className="block transition hover:opacity-80">
-              <img src={googlePlayBadge.url} alt="Download for Android" className="h-10 w-auto" />
-            </Link>
+            <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
+              <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-10 w-auto" />
+            </a>
           </div>
         </div>
       </header>
@@ -47,7 +47,7 @@ export function PageShell({ title, children }: { title: string; children: ReactN
               <a href="#" aria-label="Download on the App Store">
                 <img src={appStoreBadge.url} alt="Download on the App Store" className="h-12 w-auto object-contain" />
               </a>
-              <a href="#" aria-label="Get it on Google Play">
+              <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
                 <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-12 w-auto object-contain" />
               </a>
             </div>

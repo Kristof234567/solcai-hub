@@ -33,7 +33,7 @@ function Nav() {
           <a href="#download" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
             <img src={appStoreBadge.url} alt="Download for iOS" className="h-10 w-auto" />
           </a>
-          <a href="#download" aria-label="Download for Android on Google Play" className="block transition hover:opacity-80">
+          <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
             <img src={googlePlayBadge.url} alt="Download for Android" className="h-10 w-auto" />
           </a>
         </div>
@@ -61,7 +61,7 @@ function Hero() {
           <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
             <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
           </a>
-          <a href="#" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
+          <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
             <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-14 w-auto" />
           </a>
         </div>
@@ -265,7 +265,7 @@ function CTA() {
               <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
                 <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
               </a>
-              <a href="#" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
+              <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
                 <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-14 w-auto" />
               </a>
             </div>
@@ -290,7 +290,7 @@ function Footer() {
             <a href="#" aria-label="Download on the App Store">
               <img src={appStoreBadge.url} alt="Download on the App Store" className="h-12 w-auto object-contain" />
             </a>
-            <a href="#" aria-label="Get it on Google Play">
+            <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
               <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-12 w-auto object-contain" />
             </a>
           </div>
