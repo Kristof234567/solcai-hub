@@ -193,7 +193,7 @@ function Reviews() {
     { name: "Maya R.", role: "Marathon runner", body: "I dropped MyFitnessPal after two days with Solc. It's just… faster. Photo, done.", avatar: avatarMaya.url, stars: 5 },
     { name: "Daniel K.", role: "Busy dad", body: "love your app it helps me keep track of my food without overthinking everything and gives me a visual of my portions plus it's so aesthetic 💓", avatar: avatarDaniel.url },
     { name: "Priya S.", role: "Nutrition coach", body: "I recommend Solc AI to every client. The macro estimates hold up against my lab reference meals.", avatar: avatarPriya.url, stars: 5 },
-    { name: "Jordan T.", role: "Wellness creator", body: "For people that want to control their calories @calai.app is the app for you 🙌🔥", avatar: avatarJordan },
+    { name: "Jordan T.", role: "Wellness creator", body: "For people that want to control their calories @solcai.app is the app for you 🙌🔥", avatar: avatarJordan },
     { name: "Sophie M.", role: "Frequent traveler", body: "I travel nonstop for work and restaurant menus used to stress me out. Now I just snap the menu with Solc AI and order with confidence. Total lifesaver!", avatar: avatarSophie },
   ];
   return (
