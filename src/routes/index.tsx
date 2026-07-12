@@ -65,7 +65,7 @@ function Hero() {
             <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-14 w-auto" />
           </a>
         </div>
-        <p className="mt-4 text-xs text-muted-foreground">Free to start · No credit card · 4.9 ★ from 12,400+ users</p>
+        <p className="mt-4 text-xs text-muted-foreground">Free to start · No credit card · 4.9 ★</p>
 
         <div className="relative mt-20 mx-auto max-w-4xl">
           <div className="absolute inset-x-16 -bottom-6 h-24 rounded-full blur-3xl" style={{ background: "var(--gold)", opacity: 0.2 }} />
