@@ -18,10 +18,10 @@ export const Route = createFileRoute("/")({
 function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="Solc AI" width={32} height={32} className="h-8 w-8 object-contain" />
-          <span className="text-lg font-semibold tracking-tight">Solc<span className="text-gold-gradient"> AI</span></span>
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 py-3 sm:py-4">
+        <a href="#top" className="flex items-center gap-2 min-w-0 shrink-0">
+          <img src={logoAsset.url} alt="Solc AI" width={32} height={32} className="h-8 w-8 object-contain shrink-0" />
+          <span className="text-lg font-semibold tracking-tight whitespace-nowrap">Solc<span className="text-gold-gradient"> AI</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#how" className="hover:text-foreground transition">How it works</a>
@@ -29,7 +29,7 @@ function Nav() {
           <a href="#reviews" className="hover:text-foreground transition">Reviews</a>
           <a href="#faq" className="hover:text-foreground transition">FAQ</a>
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="hidden sm:flex items-center gap-2">
           <a href="#download" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
             <img src={appStoreBadge.url} alt="Download for iOS" className="h-10 w-auto" />
           </a>
@@ -37,6 +37,9 @@ function Nav() {
             <img src={googlePlayBadge.url} alt="Download for Android" className="h-10 w-auto" />
           </a>
         </div>
+        <a href="#download" className="sm:hidden inline-flex items-center rounded-full border border-gold/40 bg-surface px-4 py-2 text-sm font-medium text-gold-gradient hover:bg-surface-elevated transition whitespace-nowrap">
+          Get the app
+        </a>
       </div>
     </header>
   );
@@ -44,20 +47,20 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-hero-radial pt-32 pb-24">
+    <section id="top" className="relative overflow-hidden bg-hero-radial pt-24 pb-16 sm:pt-32 sm:pb-24">
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full blur-3xl" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)", opacity: 0.25 }} />
       </div>
       <div className="relative max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.02] tracking-tight">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] tracking-tight">
           Snap your meal.
           <br />
           <span className="text-gold-gradient italic font-normal">Know your calories.</span>
         </h1>
-        <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
+        <p className="mt-6 sm:mt-8 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
           Solc AI reads your plate in seconds. No barcodes. No searching. Just point, shoot, and log — with calories and macros you can actually trust.
         </p>
-        <div id="download" className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div id="download" className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
             <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
           </a>
@@ -67,7 +70,7 @@ function Hero() {
         </div>
         <p className="mt-4 text-xs text-muted-foreground">Free to start · No credit card · 4.9 ★</p>
 
-        <div className="relative mt-20 mx-auto max-w-4xl">
+        <div className="relative mt-14 sm:mt-20 mx-auto max-w-4xl">
           <div className="absolute inset-x-16 -bottom-6 h-24 rounded-full blur-3xl" style={{ background: "var(--gold)", opacity: 0.2 }} />
           <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-[var(--shadow-elevated)]">
             <img src={heroFood} alt="Healthy meal with salmon, avocado and berries" width={1536} height={1536} className="w-full h-auto object-cover" />
@@ -86,14 +89,14 @@ function HowItWorks() {
     { n: "03", title: "Sync", body: "Calories, protein, carbs, and fat log to your daily journal instantly. Adjust with a swipe." },
   ];
   return (
-    <section id="how" className="py-32">
+    <section id="how" className="py-20 sm:py-32">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Three seconds from <span className="text-gold-gradient italic font-normal">plate to log</span>.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Three seconds from <span className="text-gold-gradient italic font-normal">plate to log</span>.</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 mt-10 sm:mt-16">
           {steps.map((s) => (
-            <div key={s.n} className="rounded-3xl border border-border/60 bg-surface p-8 hover:bg-surface-elevated transition">
+            <div key={s.n} className="rounded-3xl border border-border/60 bg-surface p-6 sm:p-8 hover:bg-surface-elevated transition">
               <div className="text-gold-gradient text-sm font-mono mb-8">{s.n}</div>
               <h3 className="text-2xl font-semibold mb-3">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{s.body}</p>
@@ -107,8 +110,8 @@ function HowItWorks() {
 
 function FeatureShowcase() {
   return (
-    <section id="features" className="py-32 bg-surface/30">
-      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <section id="features" className="py-20 sm:py-32 bg-surface/30">
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
         <div className="order-2 lg:order-1">
           <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-[var(--shadow-elevated)]">
             <img src={scanFood} alt="Scanning a meal with Solc AI" width={1280} height={1600} loading="lazy" className="w-full h-auto object-cover" />
@@ -116,7 +119,7 @@ function FeatureShowcase() {
         </div>
         <div className="order-1 lg:order-2 space-y-8">
           <p className="text-sm text-gold uppercase tracking-[0.2em]">Built for real life</p>
-          <h2 className="text-4xl md:text-5xl font-semibold leading-tight">Nutrition tracking that doesn't feel like <span className="italic text-gold-gradient">homework</span>.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">Nutrition tracking that doesn't feel like <span className="italic text-gold-gradient">homework</span>.</h2>
           <div className="space-y-6">
             {[
               { t: "Photo-first logging", d: "Skip the search bar. One tap replaces five minutes of typing." },
@@ -149,14 +152,14 @@ function WhyChoose() {
     { title: "Personalized Goals", body: "Solc AI adapts your daily targets based on workouts, sleep, and progress automatically." },
   ];
   return (
-    <section className="py-32 bg-surface/30">
+    <section className="py-20 sm:py-32 bg-surface/30">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-16 mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Why Choose <span className="italic text-gold-gradient">Solc AI</span>?</h2>
+        <div className="max-w-2xl mb-10 sm:mb-16 mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Why Choose <span className="italic text-gold-gradient">Solc AI</span>?</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((r) => (
-            <div key={r.title} className="rounded-3xl border border-border/60 bg-surface p-8 hover:bg-surface-elevated transition">
+            <div key={r.title} className="rounded-3xl border border-border/60 bg-surface p-6 sm:p-8 hover:bg-surface-elevated transition">
               <h3 className="text-xl font-semibold mb-3">{r.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{r.body}</p>
             </div>
@@ -175,11 +178,11 @@ function Stats() {
     { n: "4.9★", l: "App Store rating" },
   ];
   return (
-    <section className="py-24 border-y border-border/40">
+    <section className="py-16 sm:py-24 border-y border-border/40">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((s) => (
           <div key={s.l} className="text-center">
-            <div className="text-5xl md:text-6xl font-semibold text-gold-gradient">{s.n}</div>
+            <div className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gold-gradient">{s.n}</div>
             <div className="mt-2 text-sm text-muted-foreground">{s.l}</div>
           </div>
         ))}
@@ -197,14 +200,14 @@ function Reviews() {
     { name: "Sophie M.", role: "Frequent traveler", body: "I travel nonstop for work and restaurant menus used to stress me out. Now I just snap the menu with Solc AI and order with confidence. Total lifesaver!", avatar: avatarSophie },
   ];
   return (
-    <section id="reviews" className="py-32">
+    <section id="reviews" className="py-20 sm:py-32">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-16 mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Thousands of users talk about <span className="italic text-gold-gradient">us</span>.</h2>
+        <div className="max-w-2xl mb-10 sm:mb-16 mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Thousands of users talk about <span className="italic text-gold-gradient">us</span>.</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((r) => (
-            <blockquote key={r.name} className="rounded-3xl border border-border/60 bg-surface p-8 flex flex-col">
+            <blockquote key={r.name} className="rounded-3xl border border-border/60 bg-surface p-6 sm:p-8 flex flex-col">
               {r.stars ? <div className="text-gold text-lg mb-4">{"★".repeat(r.stars)}<span className="text-muted-foreground/30">{"★".repeat(5 - r.stars)}</span></div> : null}
               <p className="text-foreground/90 leading-relaxed flex-1">"{r.body}"</p>
               <footer className="mt-6 pt-6 border-t border-border/60 flex items-center gap-3">
@@ -231,10 +234,10 @@ function FAQ() {
     { q: "Which devices are supported?", a: "iPhone 12 and newer, and Android devices running Android 12+ with a modern camera." },
   ];
   return (
-    <section id="faq" className="py-32 bg-surface/30">
+    <section id="faq" className="py-20 sm:py-32 bg-surface/30">
       <div className="max-w-3xl mx-auto px-6">
         <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4 text-center">Questions</p>
-        <h2 className="text-4xl md:text-5xl font-semibold leading-tight text-center mb-16">Everything you need to know.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center mb-10 sm:mb-16">Everything you need to know.</h2>
         <div className="space-y-3">
           {items.map((it) => (
             <details key={it.q} className="group rounded-2xl border border-border/60 bg-surface p-6 open:bg-surface-elevated">
@@ -253,14 +256,14 @@ function FAQ() {
 
 function CTA() {
   return (
-    <section className="py-32">
+    <section className="py-20 sm:py-32">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="relative rounded-[2.5rem] overflow-hidden border border-border/60 bg-surface p-12 md:p-20 text-center">
+        <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-border/60 bg-surface p-8 sm:p-12 md:p-20 text-center">
           <div className="absolute inset-0 opacity-40" style={{ background: "radial-gradient(ellipse at center, var(--gold) 0%, transparent 60%)" }} />
           <div className="relative">
-            <img src={logoAsset.url} alt="" width={64} height={64} className="mx-auto h-16 w-16 object-contain mb-8" />
-            <h2 className="text-4xl md:text-6xl font-semibold leading-tight">Your next meal is one <span className="italic text-gold-gradient">snap</span> away.</h2>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">Join thousands who traded calorie counting for calorie snapping.</p>
+            <img src={logoAsset.url} alt="" width={64} height={64} className="mx-auto h-14 w-14 sm:h-16 sm:w-16 object-contain mb-6 sm:mb-8" />
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Your next meal is one <span className="italic text-gold-gradient">snap</span> away.</h2>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">Join thousands who traded calorie counting for calorie snapping.</p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
                 <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
@@ -279,8 +282,8 @@ function CTA() {
 function Footer() {
   return (
     <footer className="border-t border-border/40 py-12">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex flex-col gap-4">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div className="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
           <div className="flex items-center gap-2">
             <img src={logoAsset.url} alt="" width={24} height={24} className="h-6 w-6 object-contain" />
             <span className="text-sm text-muted-foreground">© 2026 Solc AI. Eat smarter.</span>
@@ -295,7 +298,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="flex items-center gap-6 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
           <Link to="/manage-subscription" className="hover:text-foreground transition">Manage subscription</Link>
           <Link to="/privacy" className="hover:text-foreground transition">Privacy</Link>
           <Link to="/terms" className="hover:text-foreground transition">Terms</Link>
