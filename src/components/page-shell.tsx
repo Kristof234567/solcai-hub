@@ -8,10 +8,10 @@ export function PageShell({ title, children }: { title: string; children: ReactN
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="Solc AI" width={32} height={32} className="h-8 w-8 object-contain" />
-            <span className="text-lg font-semibold tracking-tight">Solc<span className="text-gold-gradient"> AI</span></span>
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 py-3 sm:py-4">
+          <Link to="/" className="flex items-center gap-2 min-w-0 shrink-0">
+            <img src={logoAsset.url} alt="Solc AI" width={32} height={32} className="h-8 w-8 object-contain shrink-0" />
+            <span className="text-lg font-semibold tracking-tight whitespace-nowrap">Solc<span className="text-gold-gradient"> AI</span></span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <Link to="/" hash="how" className="hover:text-foreground transition">How it works</Link>
@@ -19,7 +19,7 @@ export function PageShell({ title, children }: { title: string; children: ReactN
             <Link to="/" hash="reviews" className="hover:text-foreground transition">Reviews</Link>
             <Link to="/" hash="faq" className="hover:text-foreground transition">FAQ</Link>
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-2">
             <Link to="/" hash="download" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
               <img src={appStoreBadge.url} alt="Download for iOS" className="h-10 w-auto" />
             </Link>
@@ -27,17 +27,20 @@ export function PageShell({ title, children }: { title: string; children: ReactN
               <img src={googlePlayBadge.url} alt="Get it on Google Play" className="h-10 w-auto" />
             </a>
           </div>
+          <Link to="/" hash="download" className="sm:hidden inline-flex items-center rounded-full border border-gold/40 bg-surface px-4 py-2 text-sm font-medium text-gold-gradient hover:bg-surface-elevated transition whitespace-nowrap">
+            Get the app
+          </Link>
         </div>
       </header>
-      <main className="pt-32 pb-24">
+      <main className="pt-24 pb-16 sm:pt-32 sm:pb-24">
         <div className="max-w-3xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-10 text-center">{title}</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-8 sm:mb-10 text-center">{title}</h1>
           {children}
         </div>
       </main>
       <footer className="border-t border-border/40 py-12">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col gap-4">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div className="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2">
               <img src={logoAsset.url} alt="" width={24} height={24} className="h-6 w-6 object-contain" />
               <span className="text-sm text-muted-foreground">© 2026 Solc AI. Eat smarter.</span>
@@ -52,7 +55,7 @@ export function PageShell({ title, children }: { title: string; children: ReactN
               </a>
             </div>
           </div>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground flex-wrap justify-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <Link to="/manage-subscription" className="hover:text-foreground transition">Manage subscription</Link>
             <Link to="/privacy" className="hover:text-foreground transition">Privacy</Link>
             <Link to="/terms" className="hover:text-foreground transition">Terms</Link>
