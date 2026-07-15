@@ -202,7 +202,7 @@ function PhoneCarousel() {
                 active === i ? "scale-100 opacity-100" : "scale-[0.92] opacity-60"
               }`}
             >
-              <img src={s.src} alt={s.alt} loading="lazy" className="w-full h-auto block" />
+              <img src={s.src} alt={s.alt} loading={i < 2 ? "eager" : "lazy"} decoding="async" className="w-full h-auto block" />
             </div>
           </div>
         ))}
