@@ -85,7 +85,9 @@ function Hero() {
                 src={scanFoodShot.url}
                 alt="Solc AI scanning a meal with the camera"
                 className="relative w-full h-auto rounded-[2rem] sm:rotate-[-3deg] sm:translate-y-6 transition duration-500 group-hover:rotate-0 group-hover:translate-y-0"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div className="relative group">
@@ -94,7 +96,9 @@ function Hero() {
                 src={resultShot.url}
                 alt="Solc AI nutrition results with calories and macros"
                 className="relative w-full h-auto rounded-[2rem] sm:rotate-[3deg] transition duration-500 group-hover:rotate-0"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           </div>
