@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
-import scanFood from "@/assets/scan-food.jpg";
 import scanFoodShot from "@/assets/scanfood.png.asset.json";
 import resultShot from "@/assets/resultafterscanning.png.asset.json";
+import trackShot from "@/assets/trackyourmeal.png.asset.json";
+import macrosShot from "@/assets/macros.png.asset.json";
+import progressShot from "@/assets/progress.png.asset.json";
+import menusShot from "@/assets/menus.png.asset.json";
+import waterShot from "@/assets/water.png.asset.json";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
 import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
@@ -126,14 +131,123 @@ function HowItWorks() {
   );
 }
 
+const showcaseSlides = [
+  { src: trackShot.url, alt: "Solc AI daily home screen with calories and macros" },
+  { src: scanFoodShot.url, alt: "Scanning a meal with the Solc AI camera" },
+  { src: resultShot.url, alt: "Nutrition results with calories, macros and health score" },
+  { src: macrosShot.url, alt: "Weekly macros overview in Solc AI" },
+  { src: progressShot.url, alt: "Weight and calorie progress in Solc AI" },
+  { src: menusShot.url, alt: "Menu scan with health scores for each dish" },
+  { src: waterShot.url, alt: "Water tracking in Solc AI" },
+];
+
+function PhoneCarousel() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  const scrollToIndex = (i: number) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const slide = el.children[i] as HTMLElement | undefined;
+    if (slide) el.scrollTo({ left: slide.offsetLeft - el.offsetLeft, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const center = el.scrollLeft + el.clientWidth / 2;
+        let closest = 0;
+        let closestDist = Infinity;
+        Array.from(el.children).forEach((child, i) => {
+          const c = child as HTMLElement;
+          const mid = c.offsetLeft - el.offsetLeft + c.offsetWidth / 2;
+          const d = Math.abs(mid - center);
+          if (d < closestDist) {
+            closestDist = d;
+            closest = i;
+          }
+        });
+        setActive(closest);
+        ticking = false;
+      });
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div className="relative">
+      <div className="pointer-events-none absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-gold/15 via-transparent to-transparent blur-3xl" />
+      <div
+        ref={scrollerRef}
+        className="relative flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 sm:-mx-8 sm:px-8"
+        style={{ scrollbarWidth: "none" }}
+      >
+        {showcaseSlides.map((s, i) => (
+          <div
+            key={s.src}
+            className="snap-center shrink-0 w-[72%] sm:w-[52%] md:w-[44%] lg:w-[62%]"
+          >
+            <div
+              className={`relative rounded-[2rem] overflow-hidden transition duration-500 ${
+                active === i ? "scale-100 opacity-100" : "scale-[0.92] opacity-60"
+              }`}
+            >
+              <img src={s.src} alt={s.alt} loading="lazy" className="w-full h-auto block" />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden sm:block">
+        <button
+          type="button"
+          onClick={() => scrollToIndex(Math.max(0, active - 1))}
+          aria-label="Previous screen"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 h-11 w-11 rounded-full bg-surface/80 backdrop-blur border border-border/60 grid place-items-center text-foreground hover:bg-surface-elevated transition disabled:opacity-30"
+          disabled={active === 0}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button
+          type="button"
+          onClick={() => scrollToIndex(Math.min(showcaseSlides.length - 1, active + 1))}
+          aria-label="Next screen"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 h-11 w-11 rounded-full bg-surface/80 backdrop-blur border border-border/60 grid place-items-center text-foreground hover:bg-surface-elevated transition disabled:opacity-30"
+          disabled={active === showcaseSlides.length - 1}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div className="mt-6 flex items-center justify-center gap-2">
+        {showcaseSlides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => scrollToIndex(i)}
+            aria-label={`Go to screen ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all ${
+              active === i ? "w-8 bg-gold" : "w-1.5 bg-muted-foreground/40 hover:bg-muted-foreground/70"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function FeatureShowcase() {
   return (
-    <section id="features" className="py-20 sm:py-32 bg-surface/30">
+    <section id="features" className="py-20 sm:py-32 bg-surface/30 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
         <div className="order-2 lg:order-1">
-          <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-[var(--shadow-elevated)]">
-            <img src={scanFood} alt="Scanning a meal with Solc AI" width={1280} height={1600} loading="lazy" className="w-full h-auto object-cover" />
-          </div>
+          <PhoneCarousel />
         </div>
         <div className="order-1 lg:order-2 space-y-8">
           <p className="text-sm text-gold uppercase tracking-[0.2em]">Built for real life</p>
