@@ -367,7 +367,7 @@ function FAQ() {
     { q: "Do I need to enter recipes?", a: "No. Just point your camera at the food. Solc AI handles mixed plates, drinks, and side dishes automatically." },
     { q: "Is my data private?", a: "Meal photos never leave your device. Only anonymized nutrition totals sync to your account." },
     { q: "Which devices are supported?", a: "iPhone 12 and newer, and Android devices running Android 12+ with a modern camera." },
-    { q: "Which devices are supported?", a: "iPhone 12 and newer, and Android devices running Android 12+ with a modern camera." },
+    { q: "Is my data safe?", a: "Yes. Your meals and personal data are encrypted in transit and stored securely. We never sell your data to third parties, and you can request deletion any time from the Delete Data page." },
   ];
   return (
     <section id="faq" className="py-20 sm:py-32 bg-surface/30">
