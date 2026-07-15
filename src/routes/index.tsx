@@ -133,8 +133,8 @@ function HowItWorks() {
 
 const showcaseSlides = [
   { src: trackShot.url, alt: "Solc AI daily home screen with calories and macros" },
-  { src: scanFoodShot.url, alt: "Scanning a meal with the Solc AI camera" },
   { src: resultShot.url, alt: "Nutrition results with calories, macros and health score" },
+  { src: scanFoodShot.url, alt: "Scanning a meal with the Solc AI camera" },
   { src: macrosShot.url, alt: "Weekly macros overview in Solc AI" },
   { src: progressShot.url, alt: "Weight and calorie progress in Solc AI" },
   { src: menusShot.url, alt: "Menu scan with health scores for each dish" },
