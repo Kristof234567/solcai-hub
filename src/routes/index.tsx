@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
-import heroFood from "@/assets/hero-food.jpg";
 import scanFood from "@/assets/scan-food.jpg";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
 import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
@@ -47,7 +46,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-hero-radial pt-24 pb-16 sm:pt-32 sm:pb-24">
+    <section id="top" className="relative overflow-hidden bg-hero-radial pt-24 pb-20 sm:pt-32 sm:pb-28">
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full blur-3xl" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)", opacity: 0.25 }} />
       </div>
@@ -69,13 +68,6 @@ function Hero() {
           </a>
         </div>
         <p className="mt-4 text-xs text-muted-foreground">Free to start · No credit card · 4.9 ★</p>
-
-        <div className="relative mt-14 sm:mt-20 mx-auto max-w-4xl">
-          <div className="absolute inset-x-16 -bottom-6 h-24 rounded-full blur-3xl" style={{ background: "var(--gold)", opacity: 0.2 }} />
-          <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-[var(--shadow-elevated)]">
-            <img src={heroFood} alt="Healthy meal with salmon, avocado and berries" width={1536} height={1536} className="w-full h-auto object-cover" />
-          </div>
-        </div>
       </div>
     </section>
   );
