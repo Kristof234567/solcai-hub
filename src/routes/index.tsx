@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
 import scanFood from "@/assets/scan-food.jpg";
+import scanFoodShot from "@/assets/scanfood.png.asset.json";
+import resultShot from "@/assets/resultafterscanning.png.asset.json";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
 import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
@@ -68,6 +70,30 @@ function Hero() {
           </a>
         </div>
         <p className="mt-4 text-xs text-muted-foreground">Free to start · No credit card · 4.9 ★</p>
+
+        <div className="relative mt-14 sm:mt-20">
+          <div className="pointer-events-none absolute inset-x-0 top-1/3 -z-10 mx-auto h-[60%] max-w-3xl rounded-full blur-3xl" style={{ background: "radial-gradient(ellipse at center, var(--gold) 0%, transparent 60%)", opacity: 0.15 }} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-6 md:gap-10 max-w-4xl mx-auto items-end">
+            <div className="relative group">
+              <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-gold/20 via-transparent to-transparent blur-2xl opacity-60 group-hover:opacity-100 transition duration-700" />
+              <img
+                src={scanFoodShot.url}
+                alt="Solc AI scanning a meal with the camera"
+                className="relative w-full h-auto rounded-[2rem] sm:rotate-[-3deg] sm:translate-y-6 transition duration-500 group-hover:rotate-0 group-hover:translate-y-0"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative group">
+              <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-gold/25 via-transparent to-transparent blur-2xl opacity-60 group-hover:opacity-100 transition duration-700" />
+              <img
+                src={resultShot.url}
+                alt="Solc AI nutrition results with calories and macros"
+                className="relative w-full h-auto rounded-[2rem] sm:rotate-[3deg] transition duration-500 group-hover:rotate-0"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
