@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
-import scanFood from "@/assets/scan-food.jpg";
 import scanFoodShot from "@/assets/scanfood.png.asset.json";
 import resultShot from "@/assets/resultafterscanning.png.asset.json";
+import trackShot from "@/assets/trackyourmeal.png.asset.json";
+import macrosShot from "@/assets/macros.png.asset.json";
+import progressShot from "@/assets/progress.png.asset.json";
+import menusShot from "@/assets/menus.png.asset.json";
+import waterShot from "@/assets/water.png.asset.json";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
 import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
