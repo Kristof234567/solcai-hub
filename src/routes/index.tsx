@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import logoAsset from "@/assets/logo_solcai.png.asset.json";
-import scanFoodShot from "@/assets/scanfood.png.asset.json";
-import resultShot from "@/assets/resultafterscanning.png.asset.json";
-import trackShot from "@/assets/trackyourmeal.png.asset.json";
-import macrosShot from "@/assets/macros.png.asset.json";
-import progressShot from "@/assets/progress.png.asset.json";
-import menusShot from "@/assets/menus.png.asset.json";
-import waterShot from "@/assets/water.png.asset.json";
+import scanFoodShot from "@/assets/scanfood.webp.asset.json";
+import resultShot from "@/assets/resultafterscanning.webp.asset.json";
+import trackShot from "@/assets/trackyourmeal.webp.asset.json";
+import macrosShot from "@/assets/macros.webp.asset.json";
+import progressShot from "@/assets/progress.webp.asset.json";
+import menusShot from "@/assets/menus.webp.asset.json";
+import waterShot from "@/assets/water.webp.asset.json";
 import appStoreBadge from "@/assets/appstore-badge.png.asset.json";
 import googlePlayBadge from "@/assets/googleplay-badge.jpg.asset.json";
 import avatarMaya from "@/assets/avatar-maya.jpg.asset.json";
@@ -85,7 +85,9 @@ function Hero() {
                 src={scanFoodShot.url}
                 alt="Solc AI scanning a meal with the camera"
                 className="relative w-full h-auto rounded-[2rem] sm:rotate-[-3deg] sm:translate-y-6 transition duration-500 group-hover:rotate-0 group-hover:translate-y-0"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div className="relative group">
@@ -94,7 +96,9 @@ function Hero() {
                 src={resultShot.url}
                 alt="Solc AI nutrition results with calories and macros"
                 className="relative w-full h-auto rounded-[2rem] sm:rotate-[3deg] transition duration-500 group-hover:rotate-0"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           </div>
@@ -198,7 +202,7 @@ function PhoneCarousel() {
                 active === i ? "scale-100 opacity-100" : "scale-[0.92] opacity-60"
               }`}
             >
-              <img src={s.src} alt={s.alt} loading="lazy" className="w-full h-auto block" />
+              <img src={s.src} alt={s.alt} loading={i < 2 ? "eager" : "lazy"} decoding="async" className="w-full h-auto block" />
             </div>
           </div>
         ))}
