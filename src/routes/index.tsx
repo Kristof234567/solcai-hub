@@ -116,7 +116,7 @@ function HowItWorks() {
     { n: "03", title: "Sync", body: "Calories, protein, carbs, and fat log to your daily journal instantly. Adjust with a swipe." },
   ];
   return (
-    <section id="how" className="py-20 sm:py-32">
+    <section id="how" className="py-12 sm:py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Three seconds from <span className="text-gold-gradient italic font-normal">plate to log</span>.</h2>
@@ -248,7 +248,7 @@ function PhoneCarousel() {
 
 function FeatureShowcase() {
   return (
-    <section id="features" className="py-20 sm:py-32 bg-surface/30 overflow-hidden">
+    <section id="features" className="py-12 sm:py-20 bg-surface/30 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
         <div className="order-2 lg:order-1">
           <PhoneCarousel />
@@ -288,7 +288,7 @@ function WhyChoose() {
     { title: "Personalized Goals", body: "Solc AI adapts your daily targets based on workouts, sleep, and progress automatically." },
   ];
   return (
-    <section className="py-20 sm:py-32 bg-surface/30">
+    <section className="py-12 sm:py-20 bg-surface/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-10 sm:mb-16 mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Why Choose <span className="italic text-gold-gradient">Solc AI</span>?</h2>
@@ -336,7 +336,7 @@ function Reviews() {
     { name: "Sophie M.", role: "Frequent traveler", body: "I travel nonstop for work and restaurant menus used to stress me out. Now I just snap the menu with Solc AI and order with confidence. Total lifesaver!", avatar: avatarSophie },
   ];
   return (
-    <section id="reviews" className="py-20 sm:py-32">
+    <section id="reviews" className="py-12 sm:py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-10 sm:mb-16 mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Thousands of users talk about <span className="italic text-gold-gradient">us</span>.</h2>
@@ -370,7 +370,7 @@ function FAQ() {
     { q: "Can I cancel my subscription anytime?", a: "Yes. You can cancel directly from your App Store or Google Play account settings, or use the Manage Subscription page. You'll keep access until the end of your billing period." },
   ];
   return (
-    <section id="faq" className="py-20 sm:py-32 bg-surface/30">
+    <section id="faq" className="py-12 sm:py-20 bg-surface/30">
       <div className="max-w-3xl mx-auto px-6">
         <p className="text-sm text-gold uppercase tracking-[0.2em] mb-4 text-center">Questions</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center mb-10 sm:mb-16">Everything you need to know.</h2>
@@ -392,7 +392,7 @@ function FAQ() {
 
 function CTA() {
   return (
-    <section className="py-20 sm:py-32">
+    <section className="py-12 sm:py-20">
       <div className="max-w-5xl mx-auto px-6">
         <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-border/60 bg-surface p-8 sm:p-12 md:p-20 text-center">
           <div className="absolute inset-0 opacity-40" style={{ background: "radial-gradient(ellipse at center, var(--gold) 0%, transparent 60%)" }} />
