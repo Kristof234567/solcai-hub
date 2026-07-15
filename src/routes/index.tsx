@@ -46,7 +46,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-hero-radial pt-24 pb-16 sm:pt-32 sm:pb-24">
+    <section id="top" className="relative overflow-hidden bg-hero-radial pt-24 pb-20 sm:pt-32 sm:pb-28">
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full blur-3xl" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)", opacity: 0.25 }} />
       </div>
