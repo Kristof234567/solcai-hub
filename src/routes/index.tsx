@@ -36,14 +36,14 @@ function Nav() {
           <a href="#faq" className="hover:text-foreground transition">FAQ</a>
         </nav>
         <div className="hidden sm:flex items-center gap-2">
-          <a href="#download" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
+          <a href="https://apps.apple.com/hu/app/solc-ai-calorie-tracker/id6786287543" target="_blank" rel="noopener noreferrer" aria-label="Download for iOS on the App Store" className="block transition hover:opacity-80">
             <img src={appStoreBadge.url} alt="Download for iOS" className="h-10 w-auto" />
           </a>
           <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
             <img src={googlePlayBadge.url} alt="Download for Android" className="h-10 w-auto" />
           </a>
         </div>
-        <a href="#download" className="sm:hidden inline-flex items-center rounded-full border border-gold/40 bg-surface px-4 py-2 text-sm font-medium text-gold-gradient hover:bg-surface-elevated transition whitespace-nowrap">
+        <a href="https://apps.apple.com/hu/app/solc-ai-calorie-tracker/id6786287543" target="_blank" rel="noopener noreferrer" className="sm:hidden inline-flex items-center rounded-full border border-gold/40 bg-surface px-4 py-2 text-sm font-medium text-gold-gradient hover:bg-surface-elevated transition whitespace-nowrap">
           Get the app
         </a>
       </div>
@@ -67,7 +67,7 @@ function Hero() {
           Solc AI reads your plate in seconds. No barcodes. No searching. Just point, shoot, and log — with calories and macros you can actually trust.
         </p>
         <div id="download" className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
+          <a href="https://apps.apple.com/hu/app/solc-ai-calorie-tracker/id6786287543" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" className="block transition hover:opacity-80">
             <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
           </a>
           <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
@@ -401,7 +401,7 @@ function CTA() {
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">Your next meal is one <span className="italic text-gold-gradient">snap</span> away.</h2>
             <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">Join thousands who traded calorie counting for calorie snapping.</p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#" aria-label="Download on the App Store" className="block transition hover:opacity-80">
+              <a href="https://apps.apple.com/hu/app/solc-ai-calorie-tracker/id6786287543" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" className="block transition hover:opacity-80">
                 <img src={appStoreBadge.url} alt="Download on the App Store" className="h-14 w-auto" />
               </a>
               <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="block transition hover:opacity-80">
@@ -426,7 +426,7 @@ function Footer() {
           </div>
           <p className="text-lg md:text-xl font-semibold tracking-tight">Download Solc AI Today!</p>
           <div className="flex items-center gap-3">
-            <a href="#" aria-label="Download on the App Store">
+            <a href="https://apps.apple.com/hu/app/solc-ai-calorie-tracker/id6786287543" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
               <img src={appStoreBadge.url} alt="Download on the App Store" className="h-12 w-auto object-contain" />
             </a>
             <a href="https://forms.gle/pHp21kD2ERH8DNJW8" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
