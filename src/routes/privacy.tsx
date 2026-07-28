@@ -46,7 +46,7 @@ function Privacy() {
       </Section>
 
       <Section title="2. Data controller">
-        <p>The data controller is the provider of Solc AI. As we operate as an independent developer entity, you may contact us directly for any privacy concerns.</p>
+        <p>The data controller is Kristóf Zsolt Németh, a sole trader established in Hungary. As we operate as an independent developer entity, you may contact us directly for any privacy concerns.</p>
         <p>Privacy contact email: <a href="mailto:support.solcai@gmail.com" className="text-gold hover:underline">support.solcai@gmail.com</a></p>
       </Section>
 
@@ -64,6 +64,7 @@ function Privacy() {
           <li><strong className="text-foreground">Nutrition & activity data:</strong> Logged meals (food names, calories, protein, carbohydrates, fat, portion sizes, meal type, date), water intake, weight logs, favorites, and daily nutrition goals.</li>
           <li><strong className="text-foreground">Image & media data:</strong> Photos of food, menus, or product packaging that you capture or upload for AI analysis.</li>
           <li><strong className="text-foreground">Product lookup data:</strong> Barcode numbers you scan, which may be sent to a public food database to retrieve product nutrition information.</li>
+          <li><strong className="text-foreground">Purchase &amp; enquiry data:</strong> your subscription status and plan, the email address used at checkout, and the email address and first name you enter in the questionnaire on our website. Payment card details are handled solely by our Merchant of Record and are never seen or stored by us.</li>
           <li><strong className="text-foreground">Technical & log data:</strong> IP address, device model, OS version, app version, crash logs, and (if enabled) push notification tokens.</li>
         </ul>
       </Section>
@@ -91,6 +92,7 @@ function Privacy() {
           <li><strong className="text-foreground">Railway</strong> – hosts our backend processing logic (including the AI proxy) that connects the app to the Gemini service.</li>
           <li><strong className="text-foreground">Open Food Facts</strong> – a public food-product database queried by barcode number to retrieve packaged-product nutrition information. Only the barcode number is sent; no account or personal data is shared.</li>
           <li><strong className="text-foreground">RevenueCat</strong> – securely manages mobile and web subscriptions.</li>
+          <li><strong className="text-foreground">Paddle.com Market Ltd</strong> – Merchant of Record for subscriptions purchased on our website; processes payments, invoicing, applicable taxes and refunds, and receives the email and billing details you enter at checkout.</li>
           <li><strong className="text-foreground">Apple / Google Sign-In</strong> – allows you to sign in securely without creating a separate password.</li>
         </ul>
         <p>We enter into data processing agreements with our processors where required, and they may only process your data on our instructions.</p>
